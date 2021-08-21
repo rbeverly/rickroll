@@ -11,8 +11,78 @@ div {
 img.rick {
     position:  absolute;
     bottom: 0px;
+    z-index: 1;
+    animation: dance 5s infinite;
+}
+
+img.ohmy {
+    position: relative;
+    animation:  appear 22s infinite;
+}
+
+img.ricksalt {
+    position: absolute;
+    left: -120px;
+    animation: appear2 17s infinite;
 }
 
 img.roll {
-    
+    animation: headroll 30s infinite;
+    margin: 10px;
+}
+
+img.point {
+    position: absolute;
+    max-width: 24px;
+    z-index: 3;
+}
+
+img.rickP {
+    position: absolute;
+    max-width: 24px;
+    z-index: 2;
+}
+
+@keyframes dance {
+    0% {left: -50%;}
+    25% {left: 27%;}
+    35% {left: 16%;}
+    55% {left: 35%;}
+    68% {left: 50%;}
+    100% {left: 100%;}
+}
+
+@keyframes appear {
+    0% {width: 20%; height: 20%; opacity: 0; left: 60%; margin-top: 30%;}
+    30% {width: 20%; height: 20%; opacity: 0; left: 60%; margin-top: 30%;}
+    40% {width: 70%; height: 70%; opacity: 0.2; left: 30%; margin-top: 15%;}
+    50% {width: 45%; height: 45%; opacity: 0; left: 30%; margin-top: 10%;}
+    60% {width: 20%; height: 20%; opacity: 0; left: 10%; margin-top: 20%;}
+    90% {width: 70%; height: 70%; opacity: 0.2; left: 10%; margin-top: 10%;}
+    100% {width: 45%; height: 45%; opacity: 0; left: 60%; margin-top: 5%;}
+}
+
+@keyframes appear2 {
+    0% {width: 100%; height: 100%; opacity: 0; margin-left: 20px; margin-top: 0%;}
+    15% {width: 100%; height: 100%; opacity: 0; margin-left: 20px; margin-top: 0%;}
+    35% {width: 100%; height: 100%; opacity: 0.5; margin-left: 20px; margin-top: 30%;}
+    40% {width: 100%; height: 100%; opacity: 0; margin-left: 20px; margin-top: 30%;}
+    55% {width: 90%; height: 90%; opacity: 0; margin-left: 20px; margin-top: 0%;}
+    65% {width: 80%; height: 80%; opacity: 0.5; margin-left: 20px; margin-top: 30%;}
+    70% {width: 100%; height: 100%; opacity: 0; margin-left: 20px; margin-top: 30%;}
+    80% {width: 90%; height: 90%; opacity: 0; margin-left: 20px; margin-top: 0%;}
+    90% {width: 100%; height: 100%; opacity: 0.5; margin-left: 20px; margin-top: 30%;}
+    100% {width: 80%; height: 80%; opacity: 0; margin-left: 20px; margin-top: 30%;}
+}
+
+@keyframes headroll {
+    0% {opacity: 0;}
+    5% {opacity: 0.25;}
+    10% {opacity: 0;}
+    33% {opacity: 0;}
+    40% {opacity: 0.5;}
+    50% {opacity: 0;}
+    80% {opacity: 0;}
+    90% {opacity: 0.6;}
+    100% {opacity: 0;}
 }
