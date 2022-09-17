@@ -1,4 +1,19 @@
 
+function drop_it(e) {
+    // document.getElementById('playa').play();
+    // document.getElementById('playa').muted = false;
+    // document.getElementById('playa').play();
+    document.getElementById('playa').muted = false;
+    document.getElementById('playa').play();
+}
+
+function shhh(e) {
+    if (e.key === 's') {
+        console.log('s pressed');
+        document.getElementById('playa').pause();
+    }
+}
+
 (function() {
     var rickP = document.getElementById('rickP');
     var point = document.getElementById('point');
