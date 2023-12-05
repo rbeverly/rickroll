@@ -1,18 +1,20 @@
 
 function drop_it(e) {
-    // document.getElementById('playa').play();
-    // document.getElementById('playa').muted = false;
-    // document.getElementById('playa').play();
     document.getElementById('playa').muted = false;
     document.getElementById('playa').play();
 }
 
-function shhh(e) {
+document.onmousedown = drop_it;
+
+addEventListener("keydown", function (e) {
+    // e.preventDefault();
     if (e.key === 's') {
         console.log('s pressed');
         document.getElementById('playa').pause();
+    } else {
+        drop_it();
     }
-}
+});
 
 (function() {
     var rickP = document.getElementById('rickP');
@@ -30,10 +32,8 @@ function shhh(e) {
     }
 })();
 
-// Blessed are the F12ers, for they shall inherit the ctf.
 (async function() {
-    var secretSquirrel = btoa('66 6c 61 67 7b 79 6f 75 2d 67 30 74 2d 72 31 63 6b 72 30 6c 6c 33 64 7d')
-    var song = ["Never gonna give you up,", "Never gonna let you down,", "Never gonna run around", "And desert you <3", "Never gonna make you cry,", "Never gonna say goodbye,", "Never gonna tell a lie", "An hurt you :`(", secretSquirrel];
+    var song = ["Never gonna give you up,", "Never gonna let you down,", "Never gonna run around", "And desert you <3", "Never gonna make you cry,", "Never gonna say goodbye,", "Never gonna tell a lie", "An hurt you :`("];
     var n = -1;
     while (true) {
         (n > 7) ? n = 0 : n++;
